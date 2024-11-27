@@ -7,6 +7,7 @@ const users = [{
         healthy: false,
     }]
 }];
+app.use(express.json());
 
 app.get("/", function (req, res) {
     const NabinKidneys = users[0].kidneys; // Correct reference
@@ -30,6 +31,12 @@ app.listen(3000, () => {
     console.log("Server running on http://localhost:3000");
 });
 
-app.post("/" , function(res , req){
-    
+app.post("/" , function(req , res){
+    const isHealthy = req.body.isHealthy;
+    users[0].kidneys.push({
+        healthy:isHealthy
+    })
+    res.json({
+        msg:"Done!"
+    })
 })
