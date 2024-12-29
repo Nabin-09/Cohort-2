@@ -1,42 +1,16 @@
 const express = require("express");
 const app = express();
 
-const users = [{
-    name: "Nabin",
-    kidneys: [{
-        healthy: false,
-    }]
-}];
-app.use(express.json());
+app.get("/health" , function(req, res){
+    const username = req.headers.username;
+    const passowrd = req.headers.passowrd
 
-app.get("/", function (req, res) {
-    const NabinKidneys = users[0].kidneys; // Correct reference
-    console.log(NabinKidneys);
-    const numberOfKidneys = NabinKidneys.length; // Fixed typo
-    let numberOfHealthyKidneys = 0;
-    for (let i = 0; i < NabinKidneys.length; i++) {
-        if (NabinKidneys[i].healthy) {
-            numberOfHealthyKidneys++;
-        }
+    if(username != "nabin" || passowrd != "nabin8670"){
+        res.status(403).json({
+            msg:"User doesn't exist!",
+        });
+        return;
     }
-    const numberOfUnhealthyKidneys = numberOfKidneys - numberOfHealthyKidneys;
-    res.json({
-        numberOfKidneys,
-        numberOfHealthyKidneys,
-        numberOfUnhealthyKidneys
-    });
+    res.send("Nabin is a goater!");
 });
-
-app.listen(3000, () => {
-    console.log("Server running on http://localhost:3000");
-});
-
-app.post("/" , function(req , res){
-    const isHealthy = req.body.isHealthy;
-    users[0].kidneys.push({
-        healthy:isHealthy
-    })
-    res.json({
-        msg:"Done!"
-    })
-})
+app.listen(3000);
