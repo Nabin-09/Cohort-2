@@ -1,4 +1,6 @@
 //Creating an http server
+/*npm init -y -> create a package json and give context to add more packages
+npm install express //installs express
 const express = require("express");
 
 const app = express();
@@ -30,7 +32,7 @@ Status Codes :
 */
 app.get("/" , function(req , res){
 
-})
+}) 
 
 app.listen(3000);
  
