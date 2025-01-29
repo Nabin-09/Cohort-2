@@ -5,10 +5,10 @@ Non Primitive ones are array , Function , Date , Objects(the key value pair ones
 */
 /* Classes in JS - Blueprint for creating an object(not the key value pair)
  */
-class rectangle{
-    constructor(width, height , color){
-        this.width = width;
-        this.height = height;
+class rectangle{//Class declaration
+    constructor(width, height , color){//Constructor initialises an object and is a must for every class/
+        this.width = width;//Attaching the properties to the object
+        this.height = height;//This acts as the current object
         this.color = color;
     }
     area(){
