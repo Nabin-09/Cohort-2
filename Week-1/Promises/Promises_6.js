@@ -7,7 +7,7 @@
  waitFor3s(main);
 
 function setTimeoutPromsified(){
-     return new Promise(waitFor3s); 
+     return new Promise(waitFor3s);//takes a function as input and whenever the first argument of it is called fir the .then is executed.
 }
 function main(){
     console.log("Main is called ")
