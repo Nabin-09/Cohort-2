@@ -11,9 +11,11 @@ async function solve(){//returns promise
     console.log("HELLO");
     await setTimeoutPromisifed(5000);
     console.log("HI THERE");
-}
+}//looks sync but is async
 solve();    
+console.log("Nabin");
 /*
+Nabin
 HI
 HELLO
 HI THERE
