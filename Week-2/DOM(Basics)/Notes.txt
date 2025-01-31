@@ -12,3 +12,22 @@ querySelectorAll - returns an array of all elements of the respective tag
 getElementById - returns the element with specific ID.
 getElementByClassName - return the element with specific class name.
 getElementsByClassName - returns all the elements with the specifi class name.
+Adding an element : 
+document.querySelector("h1").innerHTML = "TO_DO list"
+
+Updating element : 
+let ctr = 0;
+function callback(){
+  //  console.log(ctr);
+  //  ctr++;
+  const el = document.querySelectorAll("h4")[1]
+  el.innerHTML = ctr;
+  ctr++;
+}
+setInterval(callback,1000);//setInterval keeps calling it at an interval of 1s
+
+Deleting element : 
+removeChild function - can delete only children.
+to destroy yourself you have to select the parent
+.paretNode give the parent node of selected element.
+.destroy() - delete itself
