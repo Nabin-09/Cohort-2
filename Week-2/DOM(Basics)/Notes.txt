@@ -8,3 +8,7 @@ some functions of the object document are stated below :
 querySelector - returns reference to the first node search
     innerHTML - return the content inside the HTML tag
     value - returns the value inside tag.
+querySelectorAll - returns an array of all elements of the respective tag
+getElementById - returns the element with specific ID.
+getElementByClassName - return the element with specific class name.
+getElementsByClassName - returns all the elements with the specifi class name.
