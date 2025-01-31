@@ -1,1 +1,10 @@
-5 function of the document object
+What is DOM?
+DOM abstracts the structure of document into tree of objects, allowing scripts to manipulate
+the content and structure dynamically. This abstraction enables more complex interactions and
+functionalities beyond just static HTML.
+The document object is a reference to the root node (whole page), make sure to access it on a browser
+some functions of the object document are stated below :
+
+querySelector - returns reference to the first node search
+    innerHTML - return the content inside the HTML tag
+    value - returns the value inside tag.
