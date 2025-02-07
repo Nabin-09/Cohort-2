@@ -12,13 +12,22 @@
     <h1>Todo List</h1>
     <h4>1. Take Class</h4>
     <h4>2. Khaana khaane jaa</h4>
+    <h4>3.Biscuit Chusega</h4>
+    <button onclick="deleteRandonTodo()">Delete TODO</button>
     <div>
         <input type="text" name="" id=""></input>
         <button>Add Todo</button>
     </div>
-    <script src = "./Intro1.js">
+    <script >
        //const inoutElement = document.querySelector("input");//return the first input tag of the page
        //const val = inoutElement.value;//storing the value in the input dialog to the var val.
+       function deleteRandonTodo(){
+        const element = document.querySelector("h4");
+        // element.innerHTML = "Something new" //changes the element
+        //get the parent node to delete it , either using parentNode
+        const parentElement = element.parentNode;
+        parentElement.removeChild(element);
+       }
     </script>
 </body>
 </html>

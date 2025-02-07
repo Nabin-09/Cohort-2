@@ -31,3 +31,18 @@ removeChild function - can delete only children.
 to destroy yourself you have to select the parent
 .paretNode give the parent node of selected element.
 .destroy() - delete itself
+ <script >
+       //const inoutElement = document.querySelector("input");//return the first input tag of the page
+       //const val = inoutElement.value;//storing the value in the input dialog to the var val.
+       function deleteRandonTodo(){
+        const element = document.querySelector("h4");
+        // element.innerHTML = "Something new" //changes the element
+        //get the parent node to delete it , either using parentNode
+        const parentElement = element.parentNode;
+        parentElement.removeChild(element);
+       }
+    </script>
+
+Adding element - 
+  createElement - creates element outside DOM
+  appendChild
